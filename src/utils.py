@@ -150,7 +150,7 @@ def load_all_books(data_dir: str, max_books: int = None) -> List[Tuple]:
             tokens = preprocess_text(clean_text)
             
             # Filtrar libros muy cortos
-            if len(tokens) < 50:
+            if len(tokens) < 1:
                 print(f"  ⚠️  Saltando {fname} (muy corto: {len(tokens)} tokens)")
                 continue
             
